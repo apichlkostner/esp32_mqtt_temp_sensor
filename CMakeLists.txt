@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.16)
+
+# example lib used for WIFI access
+set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/examples/common_components/protocol_examples_common)
+
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+
+project(temp_sens)
+target_add_binary_data(temp_sens.elf "main/mqtt_self_ca.pem" TEXT)
