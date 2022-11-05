@@ -32,4 +32,36 @@ menu "Temp_Sens configuration"
         help
             GPIO number for I2C Master data line.
 
+    config POWER_SAVE_MIN_MODEM
+    	bool "Enable minimum powersafe for WiFi"
+	default true
+	help
+	    Enables the minimum powersafe mode for WiFi
+
+    config POWER_SAVE_MAX_MODEM
+    	bool "Enable maximum powersafe for WiFi"
+	default true
+	help
+	    Enables the maximum powersafe mode for WiFi
+
+    config WIFI_SSID
+        string "WiFi SSID"
+        default "myssid"
+        help
+            SSID (network name) for the example to connect to.
+
+    config WIFI_PASSWORD
+        string "WiFi Password"
+        default "mypassword"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+            Can be left blank if the network has no security set.
+
+    config WIFI_LISTEN_INTERVAL
+        int "WiFi listen intervall"
+	default 3
+	help
+	    WiFi listen intervall in AP beacon intervals in POWER_SAVE_MAX_MODEM mode
+        
+
 endmenu

@@ -1,6 +1,6 @@
 # Temperature sensor with ESP32
 
-Build with the ESP-IDF toolchain. Uses the example components to connect to WiFi. 
+Build with the ESP-IDF toolchain.
 
 - Measures temperature and humidity
 - Publishes the data to a MQTT server
@@ -9,3 +9,4 @@ Build with the ESP-IDF toolchain. Uses the example components to connect to WiFi
 - Received OTA update command with MQTT
 - Performs OTA update by downloading the image from a HTTPS server
 - Connection to MQTT and HTTPS server secured with self signed certificates
+- Power safe mode for WiFi configurable

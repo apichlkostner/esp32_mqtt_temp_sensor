@@ -13,8 +13,7 @@
 #include "led.h"
 #include "mqtt.h"
 #include "ota.h"
-
-#include "protocol_examples_common.h"
+#include "wifi.h"
 
 #include <sys/param.h>
 
@@ -38,7 +37,8 @@ void app_main(void)
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
-    ESP_ERROR_CHECK(example_connect());
+    
+    wifi_init();
 
     mqtt_app_start();
 
